@@ -1,5 +1,5 @@
 require_relative 'test_helper'
-require_relative '../lib/key_parser'
+require_relative '../lib/keys_parser'
 
 class KeysParserTest < Minitest::Test
 	attr_reader :keys_parser

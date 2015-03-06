@@ -1,12 +1,12 @@
-require_relative 'key_parser'
+require_relative 'keys_parser'
 require_relative 'offset_parser'
-require_relative "rotator"
+require_relative 'rotator'
 
 class Encryptor
 
 	def initialize(key, date, message)
-		key_parser = KeyParser.new 
-		@rotation_numbs = key_parser.parse(key)
+		keys_parser = KeysParser.new 
+		@rotation_numbs = keys_parser.parse(key)
 
 		offset_parser = OffsetParser.new
 		@offset_numbs = offset_parser.offset(date)
@@ -31,7 +31,7 @@ class Encryptor
 
 	end
 
-# Takes the key and sends the key into key_parser and gets back the rotation numbers
+# Takes the key and sends the key into keys_parser and gets back the rotation numbers
 # Takes the date sends that to offset parser and gets the offset numbers
 
 # Reads the input file
