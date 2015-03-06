@@ -1,6 +1,5 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require '../lib/offset_parser'
+require_relative 'test_helper'
+require_relative '../lib/offset_parser'
 
 class KeyParserTest < Minitest::Test
 	attr_accessor :offset_parser

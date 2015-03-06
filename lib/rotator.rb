@@ -10,7 +10,6 @@ class Rotator
 	def rotate(letter, rotation, offset)
 
 		letter_index = @char_map.index(letter)
-		require 'pry'; binding.pry
 
 		rotated_letter_index = letter_index + (rotation + offset)
 

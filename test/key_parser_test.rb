@@ -1,26 +1,24 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require '../lib/key_parser'
+require_relative 'test_helper'
+require_relative '../lib/key_parser'
 
-class KeyParserTest < Minitest::Test
-	attr_accessor :key_parser
+class KeysParserTest < Minitest::Test
+	attr_reader :keys_parser
 
 	def setup
-		@key_parser = KeyParser.new
+		@keys_parser = KeysParser.new
 	end
 
 	def test_it_exists
-		assert key_parser
+		assert keys_parser
 	end
 
 	def test_it_takes_key_and_parses_it_out_into_array
-		assert_equal [41, 15, 52, 21], key_parser.parse("41521")
+		assert_equal [41, 15, 52, 21], keys_parser.parse("41521")
 	end
 
 	def test_it_generates_a_five_digit_string
-		assert_equal 5, key_parser.generate.size
-		assert_equal String, key_parser.generate.class
+		assert_equal 5, keys_parser.generate.size
+		assert_equal String, keys_parser.generate.class
 	end
-
 
 end

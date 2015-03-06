@@ -1,6 +1,7 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require '../lib/encryptor'
+require_relative 'test_helper'
+require_relative '../lib/encryptor'
+
+
 
 class EncryptorTest < Minitest::Test
 
@@ -10,6 +11,7 @@ class EncryptorTest < Minitest::Test
 	end
 
 	def test_it_encrypts
+		skip
 		encryptor = Encryptor.new("41521", "020315", "rubyruby")
 		assert_equal "2.ql2.ql2", encryptor.encrypt 
 	end
