@@ -7,11 +7,14 @@ class Rotator
 		@char_map = ("a".."z").to_a + ("0".."9").to_a + [' ', '.', ',']
 	end
 
-	def rotate(letter, rotation, offset)
-
+	def rotate(letter, rotation, offset, crypt=false)
 		letter_index = @char_map.index(letter)
 
-		rotated_letter_index = letter_index + (rotation + offset)
+		if crypt == false
+			rotated_letter_index = letter_index - (rotation + offset)
+		else
+			rotated_letter_index = letter_index + (rotation + offset)
+		end
 
 		if rotated_letter_index > 39 || rotated_letter_index < -39
 		  rotated_letter_index = rotated_letter_index % @char_map.size
@@ -23,8 +26,4 @@ class Rotator
 end
 
 
-
-
-# rotator = Rotator.new
-# rotator.rotate("a", 2) # => "c"
 
