@@ -6,15 +6,12 @@ class Decryptor
 
 	def decrypt(key, date, message)
 		keys_parser = KeysParser.new 
-		rotation_numbs = keys_parser.parse(key)
+		rotation_numbs = keys_parser.key_parse(key)
 
 		offset_parser = OffsetParser.new
-		offset_numbs = offset_parser.offset(date)
+		offset_numbs = offset_parser.date_parse(date)
 
 		rotator = Rotator.new
-
-		key.to_i * -1
-		date.to_i * -1
 
 		encrypted_chars = []
 		counter = 0 
@@ -24,10 +21,8 @@ class Decryptor
 			offset = offset_numbs[counter]
 			encrypted_chars << rotator.rotate(letter, rotation, offset)
 			counter += 1
-			counter = 0 if counter == 4 # only going to execute if true
+			counter = 0 if counter == 4 
 		end
 		encrypted_chars.join	
-
 	end
-
 end

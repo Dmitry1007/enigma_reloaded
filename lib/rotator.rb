@@ -1,5 +1,6 @@
 
 
+
 class Rotator
 	attr_reader :char_map
 
@@ -7,10 +8,10 @@ class Rotator
 		@char_map = ("a".."z").to_a + ("0".."9").to_a + [' ', '.', ',']
 	end
 
-	def rotate(letter, rotation, offset, crypt=false)
+	def rotate(letter, rotation, offset, reverse_rotate=true)
 		letter_index = @char_map.index(letter)
 
-		if crypt == false
+		if reverse_rotate == true
 			rotated_letter_index = letter_index - (rotation + offset)
 		else
 			rotated_letter_index = letter_index + (rotation + offset)
@@ -21,7 +22,6 @@ class Rotator
 		end
 
 		@char_map[rotated_letter_index]
-
 	end
 end
 

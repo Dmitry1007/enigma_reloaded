@@ -13,12 +13,7 @@ class KeysParserTest < Minitest::Test
 	end
 
 	def test_it_takes_key_and_parses_it_out_into_array
-		assert_equal [41, 15, 52, 21], keys_parser.parse("41521")
-	end
-
-	def test_it_generates_a_five_digit_string
-		assert_equal 5, keys_parser.generate.size
-		assert_equal String, keys_parser.generate.class
+		assert_equal [41, 15, 52, 21], keys_parser.key_parse("41521")
 	end
 
 end

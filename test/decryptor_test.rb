@@ -1,7 +1,5 @@
 require_relative 'test_helper'
 require_relative '../lib/decryptor'
-require 'pry'
-
 
 
 class DecryptorTest < Minitest::Test
@@ -20,5 +18,5 @@ class DecryptorTest < Minitest::Test
 		decryptor = Decryptor.new
 		assert_equal "rubyruby", decryptor.decrypt("41521", "020315","2.ql2.ql") 
 	end
-
+	
 end
