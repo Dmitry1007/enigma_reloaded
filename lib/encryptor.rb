@@ -4,7 +4,12 @@ require_relative 'rotator'
 
 class Encryptor
 
-	def generate
+	def date_generator
+		t = Time.new
+		t.strftime "%m%d%y"
+	end
+
+	def key_generator
 		@rand_gen_keys = [0,1,2,3,4,5,6,7,8,9].sample(5).join
 	end
 

@@ -25,4 +25,4 @@ class Decryptor
 		end
 		encrypted_chars.join	
 	end
-end
+end 
