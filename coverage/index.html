@@ -14,27 +14,27 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-08T16:40:37-06:00">2015-03-08T16:40:37-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-08T19:05:22-06:00">2015-03-08T19:05:22-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">99.33%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.43
+         4.12
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>11</b> files in total.
-    <b>135</b> relevant lines. 
-    <span class="green"><b>135</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>149</b> relevant lines. 
+    <span class="green"><b>148</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#6a0af26896e47708c5fa2d5c3fd660c177573dc9" class="src_link" title="lib/decryptor.rb">lib/decryptor.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>19</td>
-        <td>19</td>
+        <td>30</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
-        <td>5.1</td>
+        <td>5.0</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#f5e5594cad1a36842963362a073c82027f0636d4" class="src_link" title="lib/nut_cracker.rb">lib/nut_cracker.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>18</td>
+        <td class="yellow strong">88.89 %</td>
+        <td>31</td>
+        <td>9</td>
+        <td>8</td>
         <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -133,9 +133,9 @@
       <tr>
         <td class="strong"><a href="#e4a0e680914bfa791f1c0ef6cdf8cc63c61f931b" class="src_link" title="test/nut_cracker_test.rb">test/nut_cracker_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>5</td>
-        <td>5</td>
+        <td>26</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -181,8 +181,8 @@
     <h3>lib/decryptor.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -235,43 +235,43 @@
         <li class="covered" data-hits="3" data-linenumber="8">
           <span class="hits">3</span>
           
-          <code class="ruby">    keys_parser = KeysParser.new </code>
+          <code class="ruby">    if key</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="9">
           <span class="hits">3</span>
           
-          <code class="ruby">    rotation_numbs = keys_parser.key_parse(key)</code>
+          <code class="ruby">      keys_parser = KeysParser.new </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      rotation_numbs = keys_parser.key_parse(key)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
+        <li class="covered" data-hits="3" data-linenumber="13">
           <span class="hits">3</span>
           
           <code class="ruby">    offset_parser = OffsetParser.new</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="12">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    offset_numbs = offset_parser.date_parse(date)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="covered" data-hits="3" data-linenumber="14">
           <span class="hits">3</span>
           
-          <code class="ruby">    rotator = Rotator.new</code>
+          <code class="ruby">    offset_numbs = offset_parser.date_parse(date)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -283,76 +283,88 @@
         <li class="covered" data-hits="3" data-linenumber="16">
           <span class="hits">3</span>
           
-          <code class="ruby">    encrypted_chars = []</code>
+          <code class="ruby">    rotator = Rotator.new</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="17">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    counter = 0 </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="3" data-linenumber="18">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    encrypted_chars = []</code>
+        </li>
+      
         <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    counter = 0 </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="21">
           <span class="hits">3</span>
           
           <code class="ruby">    message.each_char do |letter|</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="20">
+        <li class="covered" data-hits="13" data-linenumber="22">
           <span class="hits">13</span>
           
           <code class="ruby">      rotation = rotation_numbs[counter] </code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="21">
+        <li class="covered" data-hits="13" data-linenumber="23">
           <span class="hits">13</span>
           
           <code class="ruby">      offset = offset_numbs[counter]</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="22">
+        <li class="covered" data-hits="13" data-linenumber="24">
           <span class="hits">13</span>
           
           <code class="ruby">      encrypted_chars &lt;&lt; rotator.rotate(letter, rotation, offset)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="23">
+        <li class="covered" data-hits="13" data-linenumber="25">
           <span class="hits">13</span>
           
           <code class="ruby">      counter += 1</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="24">
+        <li class="covered" data-hits="13" data-linenumber="26">
           <span class="hits">13</span>
           
           <code class="ruby">      counter = 0 if counter == 4 </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="26">
+        <li class="covered" data-hits="3" data-linenumber="28">
           <span class="hits">3</span>
           
           <code class="ruby">    encrypted_chars.join  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end </code>
@@ -737,11 +749,11 @@
         <div class="source_table" id="f5e5594cad1a36842963362a073c82027f0636d4">
   <div class="header">
     <h3>lib/nut_cracker.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">88.89 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>9</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -766,58 +778,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># split last 7 letters from original message</code>
+          <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># find length of original message and % by 4</code>
+          <code class="ruby">    @rotations = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># the remainder is important why???</code>
+          <code class="ruby">    @char_map = [*(&quot;a&quot;..&quot;z&quot;), *(&quot;0&quot;..&quot;9&quot;), &#39; &#39;, &#39;.&#39;, &#39;,&#39;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    @starting_index = 37</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
+          <code class="ruby">  def crack(secret_char,offset)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          <code class="ruby"></code>
+          <code class="ruby">    rotation_a = ((@starting_index - offset.to_i) - @char_map.index(secret_char)).to_s</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -826,22 +838,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  def starting_rot(message)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    @rotations[(message.length - 7) % 4]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -851,6 +863,84 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"># split last 7 letters from original message</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"># find length of original message and % by 4</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
@@ -1519,8 +1609,8 @@
     <h3>test/nut_cracker_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1558,37 +1648,127 @@
           <code class="ruby">class NutCrackerTest &lt; Minitest::Test</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :nut_cracker</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def test_it_exists</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    nut_cracker = NutCracker.new</code>
+          <code class="ruby">  def setup</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @nut_cracker = NutCracker.new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  # def test_splits_last_7_characters_from_string</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  #   assert_equal &quot;ag, uhv&quot;, nut_cracker.crack(&quot;afgikd igf d , ihag, uhv&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  # def test_it_knows_the_starting_rotation</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  #   assert_equal &quot;a&quot;, nut_cracker.starting_rot(&quot;hello this is my string ..end..&quot;) </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def test_it_returns_period_for_v_character</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    secret_char = &quot;v&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    offset_a = &quot;2&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;14&quot;, nut_cracker.crack(secret_char,offset_a)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -1909,13 +2089,13 @@
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">  def test_it_rotates_in_reverse_when_negative_number_is_passed</code>
+          <code class="ruby">  def test_it_rotates_in_reverse_when_decrypt</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">    assert_equal &quot;.&quot;, rotator.rotate(&quot;c&quot;, 3, 1, true) </code>
+          <code class="ruby">    assert_equal &quot;f&quot;, rotator.rotate(&quot;v&quot;, 14, 2, true) </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">

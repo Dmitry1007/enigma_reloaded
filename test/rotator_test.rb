@@ -24,8 +24,8 @@ class RotatorTest < Minitest::Test
     assert_equal "y", rotator.rotate("n", 41, 9, false)
   end
 
-  def test_it_rotates_in_reverse_when_negative_number_is_passed
-    assert_equal ".", rotator.rotate("c", 3, 1, true) 
+  def test_it_rotates_in_reverse_when_decrypt
+    assert_equal "f", rotator.rotate("v", 14, 2, true) 
     assert_equal "6", rotator.rotate("e", 30, 20, true)
   end
 

@@ -5,8 +5,10 @@ require_relative 'rotator'
 class Decryptor
 
   def decrypt(key, date, message)
-    keys_parser = KeysParser.new 
-    rotation_numbs = keys_parser.key_parse(key)
+    if key
+      keys_parser = KeysParser.new 
+      rotation_numbs = keys_parser.key_parse(key)
+    end
 
     offset_parser = OffsetParser.new
     offset_numbs = offset_parser.date_parse(date)
