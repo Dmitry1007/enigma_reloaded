@@ -13,5 +13,5 @@ BOOYEAYY = nut_cracker.crack(decrypt_date, message)
 
 File.open(decrypted_message_filename, "w") { |file| file.write(BOOYEAYY) }
 
-puts "Created 'cracked.txt' with the cracked key #{File.readlines(decrypted_message_filename, "r")} and date #{decrypt_date}"
+puts "Created 'cracked.txt' with the cracked key #{File.readlines(decrypted_message_filename, "r").first} and date #{decrypt_date}"
 
