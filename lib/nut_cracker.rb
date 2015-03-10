@@ -17,8 +17,4 @@ class NutCracker
 
 end
 
-if __FILE__ == $0
-cracker = NutCracker.new
-puts cracker.crack("101215", "xg0d9jkynrtuwtcsnkudqygy4ogdoagttaa")
-end
 

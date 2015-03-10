@@ -9,8 +9,9 @@ class NutCrackerTest < Minitest::Test
     @nut_cracker = NutCracker.new
   end
 
-  def test_
-    
+  def test_it_magically_finds_the_secret_key_and_outsmarts_z_germans
+    assert_equal "13984", nut_cracker.crack("031015", "ughi6j43kcy47c7w.,fz4mbila0yqau" )
+    assert_equal "15034", nut_cracker.crack("031015", "wr3 8unsmnht9nqlak1o6xx nljnsld" )
   end 
 
 end
