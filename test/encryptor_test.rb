@@ -4,11 +4,6 @@ require_relative '../lib/encryptor'
 
 class EncryptorTest < Minitest::Test
 
-  def test_it_generates_todays_date_in_six_digit_string_format
-    encryptor = Encryptor.new
-    assert_equal "030815", encryptor.date_generator
-  end
-
   def test_it_generates_a_five_digit_string
     encryptor = Encryptor.new
     assert_equal 5, encryptor.key_generator.size
