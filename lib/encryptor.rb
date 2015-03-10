@@ -10,7 +10,7 @@ class Encryptor
   end
 
   def key_generator
-    @rand_gen_keys = [0,1,2,3,4,5,6,7,8,9].sample(5).join
+    @rand_gen_keys = [0,1,2,3,4,5,6,7,8,9].sample(5).join 
   end
 
   def encrypt(key, date, message)
@@ -36,5 +36,4 @@ class Encryptor
     encrypted_chars.join    
   end
 end
-
 

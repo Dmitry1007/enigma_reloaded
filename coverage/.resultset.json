@@ -205,7 +205,6 @@
         3,
         null,
         null,
-        null,
         null
       ],
       "/Users/Dmitry/turing/enigma/test/key_parser_test.rb": [
@@ -238,7 +237,10 @@
         1,
         null,
         1,
-        0,
+        1,
+        null,
+        null,
+        1,
         null,
         null,
         null,
@@ -328,6 +330,6 @@
         null
       ]
     },
-    "timestamp": 1426000603
+    "timestamp": 1426005776
   }
 }

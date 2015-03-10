@@ -9,6 +9,8 @@ class NutCrackerTest < Minitest::Test
     @nut_cracker = NutCracker.new
   end
 
-
+  def test_
+    
+  end 
 
 end
