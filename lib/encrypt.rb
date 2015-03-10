@@ -7,7 +7,7 @@ encrypted_message_filename = ARGV[1] || "encrypted.txt"
 message = File.open(message_filename, "r").read
 
 encrypted_message = Encryptor.new
-BOOYEY = encrypted_message.encrypt("41521","010111", message)
+BOOYEY = encrypted_message.encrypt("41521","101215", message)
 
 File.open(encrypted_message_filename, "w") { |file| file.write(BOOYEY) }
 
