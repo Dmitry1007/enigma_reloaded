@@ -15,10 +15,10 @@ class Encryptor
   end
 
   def encrypt
-    counter = -1 
+    i = -1 
     @message.chars.map do |letter| 
-      counter >= 3 ? counter = 0 : counter += 1
-      Rotator.rotate(letter, @rotations[counter], @offsets[counter], false) 
+      i >= 3 ? i = 0 : i += 1
+      Rotator.rotate(letter, @rotations[i], @offsets[i], false) 
     end.join
   end
 
