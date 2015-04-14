@@ -8,9 +8,9 @@ class Rotator
 
   def initialize(letter, rotation, offset, decrypt=true)
     @letter_index = CharMap::CHAR_MAP.index(letter)
-    @decrypt      = decrypt
     @rotation     = rotation
     @offset       = offset
+    @decrypt      = decrypt
   end
 
   def rotate
