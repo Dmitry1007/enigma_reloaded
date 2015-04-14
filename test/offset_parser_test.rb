@@ -8,9 +8,9 @@ class KeyParserTest < Minitest::Test
     @offset_parser = OffsetParser.new
   end
 
-  def test_it_takes_date_and_squares_it_and_picks_last_4_digits
+  def test_it_squares_the_date
     assert_equal [9, 2, 2, 5], offset_parser.date_parse("020315")
-    assert_equal [0, 9, 9, 6], offset_parser.date_parse("121114")
+    assert_equal [7, 9, 6, 9], offset_parser.date_parse("120313")
   end
 
 end

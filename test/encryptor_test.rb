@@ -9,11 +9,6 @@ class EncryptorTest < Minitest::Test
     @encryptor = Encryptor.new  
   end
   
-  def test_it_generates_a_five_digit_string
-    assert_equal 5, encryptor.key_generator.size
-    assert_equal String, encryptor.key_generator.class
-  end
-
   def test_it_encrypts_1_character
     assert_equal "2", encryptor.encrypt("41521", "020315", "r")  
   end
