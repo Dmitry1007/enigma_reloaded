@@ -14,15 +14,11 @@ class Encryptor
     rotations = @key_parser.key_parse(key)
     offsets   = @offset_parser.date_parse(date)
 
-    encrypted_chars = []
-    counter = 0 
-
-    message.each_char do |letter| 
-      encrypted_chars << @rotator.rotate(letter, rotations[counter], offsets[counter], false)
-      counter += 1
-      counter  = 0 if counter == 4 
-    end
-    encrypted_chars.join    
+    counter = -1 
+    message.chars.map do |letter| 
+      counter >= 3 ? counter = 0 : counter += 1
+      @rotator.rotate(letter, rotations[counter], offsets[counter], false) 
+    end.join
   end
 
 end
