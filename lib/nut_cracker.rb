@@ -2,7 +2,6 @@ require_relative 'decryptor'
 
 class NutCracker
 
-
   def crack(date, encrypted_message)
     key = 9999
     decrypted_message = ""
@@ -14,5 +13,3 @@ class NutCracker
   end
 
 end
-
-
