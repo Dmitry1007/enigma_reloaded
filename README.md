@@ -1,16 +1,10 @@
 #Enigma
 
-#Introduction
-
-#Learning Goals / Areas of Focus
-
-You are to build an encryption engine for encrypting, decrypting, and cracking messages.
-
-#Encryption Notes
+##Encryption Notes
 
 The encryption is based on rotation. The character map is made up of all the lowercase letters, then the numbers, then space, then period, then comma. New lines will not appear in the message nor character map.
 
-#The Key
+##The Key
 
 Each message uses a unique encryption key
 
@@ -24,7 +18,7 @@ The third and fourth digits of the key are the "C" rotation (52)
 
 The fourth and fifth digits of the key are the "D" rotation (21)
 
-#The Offsets
+##The Offsets
 
 The date of message transmission is also factored into the encryption
 
@@ -40,7 +34,7 @@ The third digit is the "C offset" (2)
 
 The fourth digit is the "D offset" (5)
 
-#Encrypting a Message
+##Encrypting a Message
 
 Four characters are encrypted at a time.
 
@@ -52,19 +46,17 @@ The third character is rotated forward by the "C" rotation plus the "C offset"
 
 The fourth character is rotated forward by the "D" rotation plus the "D offset"
 
-#Decrypting a Message
+##Decrypting a Message
 
 The offsets and keys can be calculated by the same methods above. Then each character is rotated backwards instead of forwards.
 
-#Cracking a Key
+##Cracking a Key
 
 When the key is not known, the offsets can still be calculated from the message date. We believe that each enemy message ends with the characters "..end..". Use that to determine when you’ve correctly guessed the key.
 
-#Usage
+##Usage
 
 The tool is used from the command line like so:
-
-close  minimize  deactivate
 
 ruby ./lib/encrypt.rb message.txt encrypted.txt
 
