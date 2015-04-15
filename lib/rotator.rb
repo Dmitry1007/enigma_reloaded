@@ -15,16 +15,16 @@ class Rotator
 
   def rotate
     if @decrypt 
-      rotated_letter_index = @letter_index - (@rotation + @offset)
+      encrypted_letter_index = @letter_index - (@rotation + @offset)
     else
-      rotated_letter_index = @letter_index + (@rotation + @offset)
+      encrypted_letter_index = @letter_index + (@rotation + @offset)
     end
 
-    if rotated_letter_index > 38 || rotated_letter_index < -38
-      rotated_letter_index = rotated_letter_index % CharMap::CHAR_MAP.size
+    if encrypted_letter_index > 38 || encrypted_letter_index < -38
+      encrypted_letter_index = encrypted_letter_index % 39
     end
   
-    CharMap::CHAR_MAP[rotated_letter_index]
+    CharMap::CHAR_MAP[encrypted_letter_index]
   end
 
 end
