@@ -4,7 +4,7 @@ class NutCracker
 
 
   def crack(date, encrypted_message)
-    decryptor = Decryptor.new
+    decryptor = Decryptor.new(key, date, message)
     key = 9999
     decrypted_message = ""
     while decrypted_message[-7..-1] != "..end.."
