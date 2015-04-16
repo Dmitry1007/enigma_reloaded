@@ -10,7 +10,7 @@ class KeysParserTest < Minitest::Test
   end
 
   def test_it_assigns_a_default_string_if_none_is_passed
-    assert_equal [12, 23, 34, 45], KeysParser.key_parse
+    assert_equal [12, 23, 34, 45], KeysParser.key_parse("12345")
   end
 
 end
