@@ -1,7 +1,6 @@
 require_relative 'decryptor'
 
 
-
 message_filename = ARGV[0] || "encrypted.txt" 
 decrypted_message_filename = ARGV[1] || "decrypted.txt"
 decrypt_key = ARGV[2]

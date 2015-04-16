@@ -1,7 +1,7 @@
 
 class OffsetParser
 
-  def date_parse(date)
+  def self.date_parse(date)
     date = date.to_i * date.to_i 
 
     a = date.to_s[-4].to_i

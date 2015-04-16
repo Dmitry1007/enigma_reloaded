@@ -5,7 +5,7 @@ class KeyParserTest < Minitest::Test
   attr_accessor :offset_parser
 
   def setup
-    @offset_parser = OffsetParser.new
+    @offset_parser = OffsetParser
   end
 
   def test_it_squares_the_date
