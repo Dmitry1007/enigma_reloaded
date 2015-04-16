@@ -1,17 +1,26 @@
 require_relative 'nut_cracker'
 
 
-
-message_filename = ARGV[0] || "encrypted.txt" 
-decrypted_message_filename = ARGV[1] || "cracked.txt"
+read_from    = ARGV[0] || "encrypted.txt" 
+write_to     = ARGV[1] || "cracked.txt"
 decrypt_date = ARGV[2]
 
-message = File.open(message_filename, "r").read
+message = File.open(read_from, "r").read
 
-nut_cracker = NutCracker.new  
-BOOYEAYY = nut_cracker.crack(decrypt_date, message)
 
-File.open(decrypted_message_filename, "w") { |file| file.write(BOOYEAYY) }
+if File.exists?(write_to)
+  puts "A file by the name of '#{write_to}' already exists. Are you sure you want to overwrite it? yes/no"
+  input = $stdin.gets.chomp
+    if input == "yes"
+      BOOYEY = NutCracker.crack(decrypt_date, message)
+      File.open(write_to, "w") { |file| file.write(BOOYEY) }
+      
+      puts "Created 'cracked.txt' with the cracked key #{File.readlines(write_to, "r").first} and date #{decrypt_date}"
+    else
+      abort("Program canceled.")
+    end
+else
+  File.open(write_to, "w") { |file| file.write(BOOYEY) }
 
-puts "Created 'cracked.txt' with the cracked key #{File.readlines(decrypted_message_filename, "r").first} and date #{decrypt_date}"
-
+  puts "Created 'cracked.txt' with the cracked key #{File.readlines(write_to, "r").first} and date #{decrypt_date}"
+end

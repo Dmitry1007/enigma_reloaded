@@ -6,7 +6,7 @@ class NutCrackerTest < Minitest::Test
   attr_reader :nut_cracker
 
   def setup
-    @nut_cracker = NutCracker.new
+    @nut_cracker = NutCracker
   end
 
   def test_it_magically_finds_the_secret_key_and_outsmarts_z_germans
